@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.k4meitu.pic.mapper.CommentMapper">
+	<insert id="addComment" parameterType="com.k4meitu.pic.po.CommentModel" useGeneratedKeys="true"
+        keyProperty="id">
+		INSERT INTO img_comment
+			(groupId, imgId, userId, imgComment, commentLike, commentDislike,isCommentShow, date) 
+		VALUES
+			(#{groupId}, #{imgId}, #{userId}, #{imgComment}, #{commentLike}, #{commentDislike}, #{isCommentShow}, #{date});
+	</insert>
+	
+	<update id="addCommentLikeAndDislike" useGeneratedKeys="true" keyProperty="id">
+		UPDATE img_comment SET commentLike = commentLike+#{like}, commentDislike = commentDislike+#{Dislike} 
+		WHERE id=#{id}
+	</update>
+	
+	<select id="getCommentByGroupId" resultType="com.k4meitu.pic.po.CommentModel">
+		SELECT * FROM img_comment WHERE groupId = #{groupId} ORDER BY date DESC limit #{curPage},#{pCount};
+	</select>
+	
+	<select id="getCommentCountByGroupId" resultType="int">
+		SELECT COUNT(*) as totalCount FROM img_comment WHERE groupId = #{groupId};
+	</select>
+	
+	<insert id="addLike" parameterType="com.k4meitu.pic.po.LikeModel" useGeneratedKeys="true"
+        keyProperty="id">
+		INSERT INTO img_like
+			(groupId, imgId,userId, imgLike, imgDislike, date) 
+		VALUES
+			(#{groupId}, #{imgId}, #{userId}, #{imgLike}, #{imgDislike}, #{date});
+	</insert>
+	
+	<select id="findLikeIsExist" parameterType="com.k4meitu.pic.po.LikeModel" 
+		resultType="com.k4meitu.pic.po.LikeModel">
+		SELECT * FROM img_like WHERE groupId = #{groupId} and userId=#{userId};
+	</select>
+	
+	<select id="findMostLikeGroup" resultType="com.k4meitu.pic.po.PicGroupMostLikeModel">
+		SELECT *,count(*) as commentCount FROM img_like GROUP BY groupId ORDER BY commentCount DESC LIMIT 0, 10;
+	</select>
+	
+	<select id="getPicGroupLikeCount" resultType="int">
+		SELECT COUNT(*) FROM img_like WHERE groupId = #{groupId};
+	</select>
+	
+</mapper>

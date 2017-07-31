@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- namespace命名空间，作用就是对sql进行分类化管理，理解sql隔离 
+注意：使用mapper代理方法开发，namespace有特殊重要的作用
+-->
+<mapper namespace="com.k4meitu.pic.mapper.CatalogCoverMapper">
+	
+	<!-- 用户信息综合查询 -->
+	<select id="getCatalogCoverById" parameterType="int"
+	 resultType="com.k4meitu.pic.po.PicGroupModel">
+		SELECT * FROM pic_group WHERE id = #{id}
+	</select>
+	
+	<select id="getAllCatalogCover" resultType="int">
+		SELECT COUNT(*) AS totalPage FROM pic_group ;
+	</select>
+	
+	<select id="getCatalogCoverListInPage"  resultType="com.k4meitu.pic.po.PicGroupModel">
+	 	SELECT * FROM pic_group order by id desc limit #{curPage},#{pCount}
+	</select>
+	
+	<select id="findGroupByKeyword" resultType="com.k4meitu.pic.po.PicGroupModel">
+		SELECT * from pic_group WHERE title LIKE #{keyword} limit #{curPage},#{pCount}
+	</select>
+	
+	<select id="getGroupCountOfKeyword" resultType="int">
+		SELECT COUNT(*) as total FROM pic_group WHERE title LIKE #{keyword} 
+	</select>
+	
+	<select id="findPicDetailByGroupId" resultType="com.k4meitu.pic.po.ImgPropModel">
+		SELECT * FROM img_prop WHERE groupId = #{groupId};
+		UPDATE pic_group SET browseCount=browseCount+1 WHERE groupId = #{groupId};
+	</select>
+	
+	<select id="findPicGroupBrowseMax" resultType="com.k4meitu.pic.po.PicGroupModel">
+		SELECT * FROM pic_group ORDER BY browseCount DESC LIMIT #{curPage},#{pCount};
+	</select>
+	
+	<select id="findPicGroupScoreMax" resultType="com.k4meitu.pic.po.PicGroupModel">
+		SELECT * FROM pic_group ORDER BY score DESC LIMIT #{curPage},#{pCount};
+	</select>
+	
+	<select id="findPicGroupByGroupId" resultType="com.k4meitu.pic.po.PicGroupModel"> 
+		SELECT * FROM pic_group WHERE groupId = #{groupId}
+	</select>
+	
+	<select id="getKeywordList" resultType="com.k4meitu.pic.po.KeywordListModel">
+		SELECT * from keyword_list LIMIT #{curPage},#{pCount};
+	</select>
+	
+	<select id="getKeywordListBySearchCount" resultType="com.k4meitu.pic.po.KeywordListModel">
+		SELECT * from keyword_list ORDER BY searchCount DESC LIMIT 0,20;
+	</select>
+	
+	<select id="getKeywordListCount" resultType="int">
+		SELECT COUNT(*) from keyword_list
+	</select>
+	
+	<select id="getGroupMenuBtn" resultType="com.k4meitu.pic.po.MenuBtnModel">
+		SELECT * FROM pic_group_type;
+	</select>
+	
+	<!--********************************** GIF动图 *******************************-->
+	<select id="getGifGroupPicNewest" resultType="com.k4meitu.pic.po.GifGroupPicNewestModel">
+		SELECT * FROM gif_pic_Group order by id desc limit #{curPage},#{pCount}
+	</select>
+	
+	<select id="getAllGifGroupPicNewest" resultType="int">
+		SELECT COUNT(*) FROM gif_pic_Group
+	</select>
+	
+	
+</mapper>

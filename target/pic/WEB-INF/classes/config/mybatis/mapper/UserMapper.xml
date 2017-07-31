@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.k4meitu.pic.mapper.UserMapper">
+	<insert id="registerUser" parameterType="com.k4meitu.pic.po.UserInfo">
+		INSERT INTO user_prop (userId, loginTimes, lastLogin, channel) VALUES(#{userId}, #{loginTimes}, #{lastLogin}, #{channel})
+	</insert>
+	
+	<select id="getUserInfo" parameterType="String" resultType="com.k4meitu.pic.po.UserInfo">
+		SELECT * FROM user_prop WHERE userId = #{value};
+	</select>
+	
+	<update id="updateUserInfo" parameterType="com.k4meitu.pic.po.UserInfo">
+		UPDATE user_prop SET loginTimes=#{loginTimes}+1, lastLogin=#{lastLogin}, channel=#{channel} WHERE userId=#{userId}
+	</update>
+</mapper>

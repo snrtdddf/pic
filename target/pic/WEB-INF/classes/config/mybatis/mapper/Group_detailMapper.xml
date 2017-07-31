@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- namespace命名空间，作用就是对sql进行分类化管理，理解sql隔离 
+注意：使用mapper代理方法开发，namespace有特殊重要的作用
+-->
+<mapper namespace="com.k4meitu.pic.mapper.Group_detailMapper">
+	<select id="findGroupDetails" parameterType="com.k4meitu.pic.po.Group_detailMapper" resultType="com.k4meitu.pic.po.Group_detailMapper">
+		SELECT * FROM sexy_girl_pic_group_detail WHERE type=#{type} AND groupId=#{groupId}
+	</select>
+</mapper>

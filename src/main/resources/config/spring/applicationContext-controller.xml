@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.2.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.2.xsd">
+	
+	
+	<!-- 图片相关 -->
+	<bean id="groupController" class="com.k4meitu.pic.controller.group.GroupController"></bean>
+	<bean id="keywordController" class="com.k4meitu.pic.controller.group.FindKeywordController"></bean>
+	<bean id="groupDetailController" class="com.k4meitu.pic.controller.group.GroupDetailController"></bean>
+	<bean id="keywordListController" class="com.k4meitu.pic.controller.group.KeywordListController"></bean>
+	<bean id="groupGetBrowseMaxController" class="com.k4meitu.pic.controller.group.GroupGetBrowseMaxController"></bean>
+	<bean id="groupGetScoreMaxController" class="com.k4meitu.pic.controller.group.GroupGetScoreMaxController"></bean>
+	<bean id="groupMenuBtnController" class="com.k4meitu.pic.controller.group.GroupMenuBtnController"></bean>
+	<bean id="gifGroupPicNewestController" class="com.k4meitu.pic.controller.group.GifGroupPicNewestController"></bean>
+	
+	<!-- 用户相关 -->
+	<bean id="registerUserController" class="com.k4meitu.pic.controller.user.RegisterUserController"></bean>
+	<bean id="getUserInfoController" class="com.k4meitu.pic.controller.user.GetUserInfoController"></bean>
+	<bean id="updateUserInfoController" class="com.k4meitu.pic.controller.user.UpdateUserInfoController"></bean>
+	
+	<!-- 评论相关 -->
+	<bean id="addCommentController" class="com.k4meitu.pic.controller.comment.AddCommentController"></bean>
+	<bean id="getCommentController" class="com.k4meitu.pic.controller.comment.GetCommentController"></bean>
+	<bean id="findLikeIsExistController" class="com.k4meitu.pic.controller.comment.FindLikeIsExistController"></bean>
+	<bean id="addLikeController" class="com.k4meitu.pic.controller.comment.AddLikeController"></bean>
+	<bean id="mostLikePicGroupController" class="com.k4meitu.pic.controller.comment.MostLikePicGroupController"></bean>
+	<bean id="addCommentLikeController" class="com.k4meitu.pic.controller.comment.AddCommentLikeController"></bean>
+</beans>
