@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.k4meitu.pic.constant.ApiConstant;
 import com.k4meitu.pic.po.ImgPropModel;
-import com.k4meitu.pic.po.PicGroupModel;
 import com.k4meitu.pic.service.CatalogCoverService;
 
 public class GroupDetailController {
