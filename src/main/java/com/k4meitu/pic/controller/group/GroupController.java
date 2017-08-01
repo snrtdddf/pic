@@ -38,19 +38,19 @@ public class GroupController {
 						if (list.size() != 0) {
 							for(int k=0; k<list.size(); k++){
 								PicGroupModel model = list.get(k);
-								//model.setImgUrl(ApiConstant.ImgPath + model.getGroupId()+"/"+model.getImgCoverName());
+								model.setImgUrl(ApiConstant.ImgPath + model.getGroupId()+"/"+model.getImgCoverName());
 								//http://img.mmjpg.com/2015/2/8.jpg
 								//http://img1.mm131.com/pic/2899/16.jpg
-								if (model.getGroupId().startsWith("222")) {
-									String[] temp = model.getGroupId().split("2017");
-									String num = temp[1];
-									model.setImgUrl("http://img1.mm131.com/pic/"+num+"/"+(k+1)+".jpg");
-								}else if(model.getGroupId().startsWith("111")){
-									String year = model.getGroupId().substring(3, 7);
-									String num = model.getGroupId().substring(7,model.getGroupId().length());
-									System.out.println(year+num);
-									model.setImgUrl("http://img.mmjpg.com/"+year+"/"+num+"/"+(k+1)+".jpg");
-								}
+//								if (model.getGroupId().startsWith("222")) {
+//									String[] temp = model.getGroupId().split("2017");
+//									String num = temp[1];
+//									model.setImgUrl("http://img1.mm131.com/pic/"+num+"/"+(k+1)+".jpg");
+//								}else if(model.getGroupId().startsWith("111")){
+//									String year = model.getGroupId().substring(3, 7);
+//									String num = model.getGroupId().substring(7,model.getGroupId().length());
+//									System.out.println(year+num);
+//									model.setImgUrl("http://img.mmjpg.com/"+year+"/"+num+"/"+(k+1)+".jpg");
+//								}
 								if (model.getType().equals("xinggan")) {
 									model.setType("性感");
 								}else if (model.getType().equals("qingchun")) {

@@ -95,6 +95,12 @@ public class CommentServiceImpl implements CommentService{
 			throws Exception {
 		return commentMapper.addCommentLikeAndDislike(commentLike, commentDislike, id);
 	}
+
+	@Override
+	public int addGifPicGroupLikeAndDislike(int picGroupLike, int picGroupDislike, int id) throws Exception {
+		// TODO Auto-generated method stub
+		return commentMapper.addGifPicGroupLikeAndDislike(picGroupLike, picGroupDislike, id);
+	}
 	
 	
 

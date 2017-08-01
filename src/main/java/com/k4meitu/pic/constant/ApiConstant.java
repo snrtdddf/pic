@@ -27,7 +27,7 @@ public class ApiConstant {
 	public static String MaxPage = "maxPage";
 	
 	//imgPath
-	public static String ImgPath = "http://14.103.207.146:8081/project/";
+	public static String ImgPath = "http://www.51yunkong.com/imgs/";
 	
 	//success
 	public static String Success =  "success";

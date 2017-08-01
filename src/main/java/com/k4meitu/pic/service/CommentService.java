@@ -2,6 +2,9 @@ package com.k4meitu.pic.service;
 
 import java.util.List;
 import java.util.Map;
+
+import org.apache.ibatis.annotations.Param;
+
 import com.k4meitu.pic.po.CommentModel;
 import com.k4meitu.pic.po.LikeModel;
 import com.k4meitu.pic.po.MenuBtnModel;
@@ -40,5 +43,10 @@ public interface CommentService {
 	//获取图组点赞总数
 	public int getPicGroupLikeCount(String groupId) throws Exception;
 	
-	
+	//****************************GIF********************************
+	//GIF图组点赞
+	public int addGifPicGroupLikeAndDislike(@Param("like")int picGroupLike,
+				 @Param("dislike")int picGroupDislike,
+				 @Param("id")int id
+				 ) throws Exception;
 }

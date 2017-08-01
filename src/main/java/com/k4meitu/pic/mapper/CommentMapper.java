@@ -41,4 +41,10 @@ public interface CommentMapper {
 										 @Param("id")int id
 										 ) throws Exception;
 	
+	//GIF图组点赞
+	public int addGifPicGroupLikeAndDislike(@Param("like")int picGroupLike,
+			 @Param("dislike")int picGroupDislike,
+			 @Param("id")int id
+			 ) throws Exception;
+	
 }

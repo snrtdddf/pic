@@ -5,6 +5,7 @@ com/k4meitu/pic/utils/converter/DateConverter.class
 com/k4meitu/pic/service/UserService.class
 com/k4meitu/pic/controller/group/GroupMenuBtnController.class
 com/k4meitu/pic/utils/RegexUtils.class
+com/k4meitu/pic/controller/comment/AddGifPicGroupLikeController.class
 com/k4meitu/pic/po/ApiRequest.class
 com/k4meitu/pic/service/impl/UserServiceImpl.class
 com/k4meitu/pic/controller/comment/GetCommentController.class
@@ -37,6 +38,7 @@ com/k4meitu/pic/constant/ErrorMsgCode.class
 com/k4meitu/pic/mapper/UserMapper.class
 com/k4meitu/pic/controller/group/FindKeywordController.class
 com/k4meitu/pic/controller/group/GroupController.class
+com/k4meitu/pic/controller/comment/AddGifPicGroupCmtController.class
 com/k4meitu/pic/controller/comment/FindLikeIsExistController.class
 com/k4meitu/pic/controller/SampleController.class
 com/k4meitu/pic/po/GifGroupPicNewestModel.class
