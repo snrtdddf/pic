@@ -6,6 +6,14 @@ public class GifGroupPicNewestModel extends PicGroupModel{
 	private int cmtCount;
 	private int browseCount;
 	private int shareCount;
+	private String linkUrl;
+	
+	public String getLinkUrl() {
+		return linkUrl;
+	}
+	public void setLinkUrl(String linkUrl) {
+		this.linkUrl = linkUrl;
+	}
 	public int getLikeCount() {
 		return likeCount;
 	}

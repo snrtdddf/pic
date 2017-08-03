@@ -63,7 +63,7 @@ public interface CatalogCoverService {
 		public List<MenuBtnModel> getGroupMenuBtn() throws Exception;
 		
 		//********************************GIF********************************
-		public List<GifGroupPicNewestModel> getGifGroupPicNewest(int curPage,int pCount) throws Exception;
+		public List<GifGroupPicNewestModel> getGifGroupPicNewest(String type, int curPage,int pCount) throws Exception;
 		//获取GIF图总数
 		public int getAllGifGroupPicNewest() throws Exception;
 }

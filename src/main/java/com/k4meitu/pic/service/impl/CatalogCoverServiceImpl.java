@@ -92,9 +92,9 @@ public class CatalogCoverServiceImpl implements CatalogCoverService{
 	}
 
 	@Override
-	public List<GifGroupPicNewestModel> getGifGroupPicNewest(int curPage,int pCount) throws Exception {
+	public List<GifGroupPicNewestModel> getGifGroupPicNewest(String type, int curPage,int pCount) throws Exception {
 		// TODO Auto-generated method stub
-		return catalogcoverMapper.getGifGroupPicNewest(curPage,pCount);
+		return catalogcoverMapper.getGifGroupPicNewest(type, curPage,pCount);
 	}
 
 	@Override

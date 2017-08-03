@@ -71,6 +71,7 @@ public interface CatalogCoverMapper {
 	//*********************************GIF*************************
 	//获取最新的GIF图
 	public List<GifGroupPicNewestModel> getGifGroupPicNewest(
+			@Param("type")String type,
 			@Param("curPage")int curPage,
 			@Param("pCount")int pCount
 			) throws Exception;

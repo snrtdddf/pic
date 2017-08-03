@@ -21,9 +21,10 @@ public class GifGroupPicNewestController {
 		
 		String curPageStr = param.get("curPage");
 		String pCountStr = param.get("pCount"); 
+		String type = param.get("type");
 		int totalPage = 0;
 		
-		if (StringUtils.isNumeric(curPageStr) && StringUtils.isNumeric(pCountStr)) {
+		if (StringUtils.isNumeric(curPageStr) && StringUtils.isNumeric(pCountStr) && type != null) {
 			int curPage = Integer.parseInt(curPageStr);
 			int pCount = Integer.parseInt(pCountStr);
 			try {
@@ -32,7 +33,7 @@ public class GifGroupPicNewestController {
 					if (( pCount>0 && pCount<=50 ) && 
 							curPage >= 0 &&
 							totalPage%pCount==0?curPage<totalPage/pCount:curPage<=totalPage/pCount) {
-						List<GifGroupPicNewestModel> list = catalogCoverService.getGifGroupPicNewest(curPage*pCount,pCount); 
+						List<GifGroupPicNewestModel> list = catalogCoverService.getGifGroupPicNewest(type, curPage*pCount,pCount); 
 						map.put("maxPage", totalPage/pCount);
 						map.put("list", list);
 					}else{

@@ -65,7 +65,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	
 	<!--***********************************GIF动图*******************************-->
 	<select id="getGifGroupPicNewest" resultType="com.k4meitu.pic.po.GifGroupPicNewestModel">
-		SELECT * FROM gif_pic_Group order by id desc limit #{curPage},#{pCount}
+		SELECT * FROM gif_pic_Group WHERE type=#{type} order by id desc limit #{curPage},#{pCount}
 	</select>
 	
 	<select id="getAllGifGroupPicNewest" resultType="int">
