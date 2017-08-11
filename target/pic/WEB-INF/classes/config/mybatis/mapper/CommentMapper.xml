@@ -46,4 +46,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		SELECT COUNT(*) FROM img_like WHERE groupId = #{groupId};
 	</select>
 	
+	<!-- GIF评论 -->
+	<update id="addGifPicGroupLikeAndDislike" useGeneratedKeys="true" keyProperty="id">
+		UPDATE gif_pic_Group SET likeCount = likeCount+#{like}, dislikeCount = dislikeCount+#{dislike} 
+		WHERE id=#{id}
+	</update>
 </mapper>

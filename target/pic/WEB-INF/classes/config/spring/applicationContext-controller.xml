@@ -32,4 +32,6 @@
 	<bean id="addLikeController" class="com.k4meitu.pic.controller.comment.AddLikeController"></bean>
 	<bean id="mostLikePicGroupController" class="com.k4meitu.pic.controller.comment.MostLikePicGroupController"></bean>
 	<bean id="addCommentLikeController" class="com.k4meitu.pic.controller.comment.AddCommentLikeController"></bean>
+	<bean id="addGifPicGroupLikeController" class="com.k4meitu.pic.controller.comment.AddGifPicGroupLikeController"></bean>
+	
 </beans>

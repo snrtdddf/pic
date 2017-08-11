@@ -7,7 +7,14 @@ public class GifGroupPicNewestModel extends PicGroupModel{
 	private int browseCount;
 	private int shareCount;
 	private String linkUrl;
+	private String content;
 	
+	public String getContent() {
+		return content;
+	}
+	public void setContent(String content) {
+		this.content = content;
+	}
 	public String getLinkUrl() {
 		return linkUrl;
 	}
