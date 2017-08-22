@@ -20,6 +20,10 @@
 	<bean id="groupMenuBtnController" class="com.k4meitu.pic.controller.group.GroupMenuBtnController"></bean>
 	<bean id="gifGroupPicNewestController" class="com.k4meitu.pic.controller.group.GifGroupPicNewestController"></bean>
 	
+	<!-- 两性宝典相关 sexyArticleLastestController -->
+	<bean id="sexyArticleLastestController" class="com.k4meitu.pic.controller.article.SexyArticleLastestController"></bean>
+	
+	
 	<!-- 用户相关 -->
 	<bean id="registerUserController" class="com.k4meitu.pic.controller.user.RegisterUserController"></bean>
 	<bean id="getUserInfoController" class="com.k4meitu.pic.controller.user.GetUserInfoController"></bean>

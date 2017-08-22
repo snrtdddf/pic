@@ -5,6 +5,7 @@
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/po/UserInfo.java
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/service/CommentService.java
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/controller/comment/AddCommentLikeController.java
+/Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/po/SexyArticleModel.java
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/controller/ApiController.java
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/controller/comment/FindLikeIsExistController.java
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/controller/group/GroupGetScoreMaxController.java
@@ -12,7 +13,9 @@
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/controller/group/GroupDetailController.java
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/po/KeywordModel.java
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/controller/comment/AddGifPicGroupLikeController.java
+/Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/controller/article/SexyArticleLastestController.java
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/service/CatalogCoverService.java
+/Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/mapper/ArticleMapper.java
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/controller/SampleController.java
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/po/MenuBtnModel.java
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/service/UserService.java
@@ -43,7 +46,9 @@
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/constant/ErrorMsgCode.java
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/controller/group/GroupMenuBtnController.java
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/controller/comment/MostLikePicGroupController.java
+/Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/service/ArticleService.java
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/controller/group/GifGroupPicNewestController.java
+/Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/service/impl/ArticleServiceImpl.java
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/po/CommentModel.java
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/controller/group/GroupGetBrowseMaxController.java
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/service/impl/CommentServiceImpl.java

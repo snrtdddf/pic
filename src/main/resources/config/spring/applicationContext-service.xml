@@ -16,4 +16,7 @@
 	<bean id="userService" class="com.k4meitu.pic.service.impl.UserServiceImpl"></bean> 
 	
 	<bean id="commentService" class="com.k4meitu.pic.service.impl.CommentServiceImpl"></bean> 
+	
+	<bean id="articleService" class="com.k4meitu.pic.service.impl.ArticleServiceImpl"></bean> 
+	
 </beans>

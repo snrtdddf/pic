@@ -24,6 +24,7 @@
       	<mapper resource="config/mybatis/mapper/CatalogCoverMapper.xml" />
       	<mapper resource="config/mybatis/mapper/CommentMapper.xml"/>
       	<mapper resource="config/mybatis/mapper/UserMapper.xml"/>
+      	<mapper resource="config/mybatis/mapper/ArticleMapper.xml"/>
     </mappers>
     
 </configuration>
