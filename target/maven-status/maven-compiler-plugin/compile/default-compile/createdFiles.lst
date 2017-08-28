@@ -4,6 +4,7 @@ com/k4meitu/pic/po/PicGroupModel.class
 com/k4meitu/pic/utils/converter/DateConverter.class
 com/k4meitu/pic/service/UserService.class
 com/k4meitu/pic/controller/group/GroupMenuBtnController.class
+com/k4meitu/pic/controller/article/SexyArticleGetByTypeController.class
 com/k4meitu/pic/utils/RegexUtils.class
 com/k4meitu/pic/controller/comment/AddGifPicGroupLikeController.class
 com/k4meitu/pic/po/ApiRequest.class

@@ -17,7 +17,14 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		SELECT COUNT(*) AS totalPage FROM sexy_article
 	</select>
 	
+	<!-- 分类查询最新的文章-->
+	<select id="getLatestArticlesByType" resultType="com.k4meitu.pic.po.SexyArticleModel">
+		SELECT * from sexy_article WHERE type=#{type} and subType=#{subType}  ORDER BY id DESC limit #{curPage},#{pCount}
+	</select>
 	
+	<select id="getAllLatestArticlesByType" resultType="int">
+		SELECT COUNT(*) AS totalPage FROM sexy_article WHERE type=#{type} and subType=#{subType}
+	</select>
 	
 	
 </mapper>

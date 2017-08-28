@@ -25,4 +25,17 @@ public class ArticleServiceImpl implements ArticleService{
 		return articleMapper.getAllLatestArticles();
 	}
 
+	@Override
+	public List<SexyArticleModel> getLatestArticlesByType(String type, String subType, int curPage, int pCount)
+			throws Exception {
+		// TODO Auto-generated method stub
+		return articleMapper.getLatestArticlesByType(type, subType, curPage, pCount);
+	}
+
+	@Override
+	public int getAllLatestArticlesByType(String type, String subType) throws Exception {
+		// TODO Auto-generated method stub
+		return articleMapper.getAllLatestArticlesByType(type, subType);
+	}
+
 }

@@ -9,6 +9,7 @@
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/controller/ApiController.java
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/controller/comment/FindLikeIsExistController.java
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/controller/group/GroupGetScoreMaxController.java
+/Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/controller/article/SexyArticleGetByTypeController.java
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/controller/group/GroupController.java
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/controller/group/GroupDetailController.java
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/po/KeywordModel.java
