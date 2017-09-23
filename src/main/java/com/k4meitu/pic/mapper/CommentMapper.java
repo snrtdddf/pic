@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
 import com.k4meitu.pic.po.CommentModel;
+import com.k4meitu.pic.po.ImgCmtLikeModel;
 import com.k4meitu.pic.po.KeywordListModel;
 import com.k4meitu.pic.po.LikeModel;
 import com.k4meitu.pic.po.PicGroupMostLikeModel;
@@ -47,4 +48,12 @@ public interface CommentMapper {
 			 @Param("id")int id
 			 ) throws Exception;
 	
+	//评论点赞with用户
+	public int addCommentLikeWithUser (ImgCmtLikeModel imgCmtLikeModel) throws Exception;
+	
+	//查询用户是否对该评论点赞了
+	public List<ImgCmtLikeModel> findCommentLikeIsExistByCommentId(
+			@Param("commentId")int commentId,
+			@Param("likeUserId")String likeUserId
+			) throws Exception;
 }

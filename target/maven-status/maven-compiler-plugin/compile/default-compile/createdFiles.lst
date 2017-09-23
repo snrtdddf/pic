@@ -55,3 +55,4 @@ com/k4meitu/pic/controller/user/UpdateUserInfoController.class
 com/k4meitu/pic/mapper/CommentMapper.class
 com/k4meitu/pic/mapper/CatalogCoverMapper.class
 com/k4meitu/pic/po/CommentModel.class
+com/k4meitu/pic/po/ImgCmtLikeModel.class

@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.k4meitu.pic.mapper.CatalogCoverMapper;
 import com.k4meitu.pic.mapper.CommentMapper;
 import com.k4meitu.pic.po.CommentModel;
+import com.k4meitu.pic.po.ImgCmtLikeModel;
 import com.k4meitu.pic.po.LikeModel;
 import com.k4meitu.pic.po.PicGroupModel;
 import com.k4meitu.pic.po.PicGroupMostLikeModel;
@@ -100,6 +101,19 @@ public class CommentServiceImpl implements CommentService{
 	public int addGifPicGroupLikeAndDislike(int picGroupLike, int picGroupDislike, int id) throws Exception {
 		// TODO Auto-generated method stub
 		return commentMapper.addGifPicGroupLikeAndDislike(picGroupLike, picGroupDislike, id);
+	}
+
+	@Override
+	public int addCommentLikeWithUser(ImgCmtLikeModel imgCmtLikeModel) throws Exception {
+		// TODO Auto-generated method stub
+		return commentMapper.addCommentLikeWithUser(imgCmtLikeModel);
+	}
+
+	@Override
+	public List<ImgCmtLikeModel> findCommentLikeIsExistByCommentId(int commentId, String likeUserId)
+			throws Exception {
+		// TODO Auto-generated method stub
+		return commentMapper.findCommentLikeIsExistByCommentId(commentId, likeUserId);
 	}
 	
 	

@@ -15,7 +15,14 @@ public class PicGroupModel {
 	private int imgCoverWidth;
 	private int browseCount;
 	private int score;
+	private int vip;
 	
+	public int getVip() {
+		return vip;
+	}
+	public void setVip(int vip) {
+		this.vip = vip;
+	}
 	public int getBrowseCount() {
 		return browseCount;
 	}

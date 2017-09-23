@@ -24,6 +24,7 @@
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/po/PicGroupModel.java
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/po/LikeModel.java
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/mapper/UserMapper.java
+/Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/po/ImgCmtLikeModel.java
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/constant/ApiConstant.java
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/controller/group/KeywordListController.java
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/utils/DateUtil.java

@@ -6,6 +6,7 @@ import java.util.Map;
 import org.apache.ibatis.annotations.Param;
 
 import com.k4meitu.pic.po.CommentModel;
+import com.k4meitu.pic.po.ImgCmtLikeModel;
 import com.k4meitu.pic.po.LikeModel;
 import com.k4meitu.pic.po.MenuBtnModel;
 
@@ -43,10 +44,15 @@ public interface CommentService {
 	//获取图组点赞总数
 	public int getPicGroupLikeCount(String groupId) throws Exception;
 	
+	//评论点赞with用户
+	public int addCommentLikeWithUser (ImgCmtLikeModel imgCmtLikeModel) throws Exception;
+			
+	//查询用户是否对该评论点赞了
+	public List<ImgCmtLikeModel> findCommentLikeIsExistByCommentId(int commentId,String likeUserId) throws Exception;
+	
 	//****************************GIF********************************
 	//GIF图组点赞
-	public int addGifPicGroupLikeAndDislike(@Param("like")int picGroupLike,
-				 @Param("dislike")int picGroupDislike,
-				 @Param("id")int id
-				 ) throws Exception;
+	public int addGifPicGroupLikeAndDislike(int picGroupLike,int picGroupDislike,int id) throws Exception;
+	
+	
 }
