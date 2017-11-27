@@ -37,6 +37,11 @@ public class AddCommentLikeController {
 		cmtLikeModel.setLikeUserId(likeUserId);
 		cmtLikeModel.setUserId(userId);
 		
+		if (likeUserId.equals(userId)) {
+			map.put(ApiConstant.ErrorMsg, "不能给自己的评论点赞");
+			return map;
+		}
+		
 		try {
 			List<ImgCmtLikeModel> list = commentService.findCommentLikeIsExistByCommentId(commentId, likeUserId);
 			if (list.size() != 0) {

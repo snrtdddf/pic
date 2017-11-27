@@ -6,15 +6,9 @@ public class KeywordListModel {
 	private int id;
 	private String keyword;
 	private int searchCount;
-	private String iconUrl;
 	private Timestamp date;
 	
-	public String getIconUrl() {
-		return iconUrl;
-	}
-	public void setIconUrl(String iconUrl) {
-		this.iconUrl = iconUrl;
-	}
+
 	public int getId() {
 		return id;
 	}

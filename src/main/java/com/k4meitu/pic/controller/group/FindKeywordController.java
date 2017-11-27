@@ -2,6 +2,7 @@ package com.k4meitu.pic.controller.group;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -10,6 +11,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.k4meitu.pic.constant.ApiConstant;
+import com.k4meitu.pic.constant.ErrorMsgCode;
 import com.k4meitu.pic.po.PicGroupModel;
 import com.k4meitu.pic.service.CatalogCoverService;
 
@@ -40,35 +42,41 @@ public class FindKeywordController{
 			
 			try {
 				int totalPage = catalogCoverService.getGroupCountOfKeyword(keyword);
-				if (( pCount>0 && pCount<=20 ) && curPage >= 0 &&totalPage%pCount==0?curPage<totalPage/pCount:curPage<=totalPage/pCount) {
-					List<PicGroupModel> list = catalogCoverService.findGroupByKeyword(keyword,curPage*pCount,pCount);
-					
-					if (list.size() != 0) {
-						for(int k=0; k<list.size(); k++){
-							PicGroupModel model = list.get(k);
-							model.setImgUrl(ApiConstant.ImgPath + model.getGroupId()+"/"+model.getImgCoverName());
-							if (model.getType().equals("xinggan")) {
-								model.setType("性感");
-							}else if (model.getType().equals("qingchun")) {
-								model.setType("清纯");
-							}else if (model.getType().equals("chemo")) {
-								model.setType("车模");
-							}else if (model.getType().equals("xiaohua")) {
-								model.setType("校花");
-							}else if (model.getType().equals("qipao")) {
-								model.setType("旗袍");
-							}else if (model.getType().equals("mmjpg_home")) {
-								model.setType("美女");
-							}else if (model.getType().equals("mingxing")) {
-								model.setType("明星");
+				if (totalPage != 0) {
+					if (( pCount>0 && pCount<=20 ) && curPage >= 0 &&totalPage%pCount==0?curPage<totalPage/pCount:curPage<=totalPage/pCount) {
+						List<PicGroupModel> list = catalogCoverService.findGroupByKeyword(keyword,curPage*pCount,pCount);
+						
+						if (list.size() != 0) {
+							for(int k=0; k<list.size(); k++){
+								PicGroupModel model = list.get(k);
+								model.setImgUrl(ApiConstant.ImgPath + model.getGroupId()+"/"+model.getImgCoverName());
+								if (model.getType().equals("xinggan")) {
+									model.setType("性感");
+								}else if (model.getType().equals("qingchun")) {
+									model.setType("清纯");
+								}else if (model.getType().equals("chemo")) {
+									model.setType("车模");
+								}else if (model.getType().equals("xiaohua")) {
+									model.setType("校花");
+								}else if (model.getType().equals("qipao")) {
+									model.setType("旗袍");
+								}else if (model.getType().equals("mmjpg_home")) {
+									model.setType("美女");
+								}else if (model.getType().equals("mingxing")) {
+									model.setType("明星");
+								}
 							}
 						}
+						map.put("maxPage", totalPage/pCount);
+						map.put("list", list);
+					}else{
+						map.put(ApiConstant.ErrorMsg, "page参数范围有误");
 					}
-					map.put("maxPage", totalPage/pCount);
-					map.put("list", list);
 				}else{
-					map.put(ApiConstant.ErrorMsg, "page参数范围有误");
+					map.put("maxPage", 0);
+					map.put("list", new ArrayList<>());
 				}
+				
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
