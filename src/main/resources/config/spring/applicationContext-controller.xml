@@ -38,4 +38,6 @@
 	<bean id="addCommentLikeController" class="com.k4meitu.pic.controller.comment.AddCommentLikeController"></bean>
 	<bean id="addGifPicGroupLikeController" class="com.k4meitu.pic.controller.comment.AddGifPicGroupLikeController"></bean>
 	
+	<!-- 广告 -->
+	<bean id="advertisementController" class="com.k4meitu.pic.controller.advertisement.AdvertisementController"></bean>
 </beans>

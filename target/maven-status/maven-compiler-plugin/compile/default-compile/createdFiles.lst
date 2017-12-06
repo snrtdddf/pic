@@ -7,11 +7,13 @@ com/k4meitu/pic/controller/group/GroupMenuBtnController.class
 com/k4meitu/pic/controller/article/SexyArticleGetByTypeController.class
 com/k4meitu/pic/utils/RegexUtils.class
 com/k4meitu/pic/controller/comment/AddGifPicGroupLikeController.class
+com/k4meitu/pic/service/impl/AdvertisementServiceImpl.class
 com/k4meitu/pic/po/ApiRequest.class
 com/k4meitu/pic/service/impl/UserServiceImpl.class
 com/k4meitu/pic/controller/comment/GetCommentController.class
 com/k4meitu/pic/controller/user/RegisterUserController.class
 com/k4meitu/pic/po/MenuBtnModel.class
+com/k4meitu/pic/controller/advertisement/AdvertisementController.class
 com/k4meitu/pic/po/KeywordModel.class
 com/k4meitu/pic/controller/user/GetUserInfoController.class
 com/k4meitu/pic/controller/article/SexyArticleLastestController.class
@@ -23,6 +25,7 @@ com/k4meitu/pic/utils/RegexConstants.class
 com/k4meitu/pic/service/CatalogCoverService.class
 com/k4meitu/pic/controller/comment/AddCommentController.class
 com/k4meitu/pic/utils/ReflectUtils.class
+com/k4meitu/pic/po/AdvertiseModel.class
 com/k4meitu/pic/controller/ApiController.class
 com/k4meitu/pic/controller/comment/MostLikePicGroupController.class
 com/k4meitu/pic/controller/group/KeywordListController.class
@@ -35,11 +38,13 @@ com/k4meitu/pic/utils/DateUtil.class
 com/k4meitu/pic/controller/group/GroupDetailController.class
 com/k4meitu/pic/controller/group/GifGroupPicNewestController.class
 com/k4meitu/pic/po/ImgPropModel.class
+com/k4meitu/pic/service/AdvertisementService.class
 com/k4meitu/pic/po/LikeModel.class
 com/k4meitu/pic/controller/group/GroupGetScoreMaxController.class
 com/k4meitu/pic/utils/UToStringBuilder.class
 com/k4meitu/pic/handler/ApiHandler.class
 com/k4meitu/pic/service/impl/ArticleServiceImpl.class
+com/k4meitu/pic/mapper/AdvertisementMapper.class
 com/k4meitu/pic/constant/ErrorMsgCode.class
 com/k4meitu/pic/mapper/UserMapper.class
 com/k4meitu/pic/controller/group/FindKeywordController.class

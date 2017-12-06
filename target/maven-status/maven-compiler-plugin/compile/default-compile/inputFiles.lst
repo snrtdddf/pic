@@ -11,6 +11,7 @@
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/controller/group/GroupGetScoreMaxController.java
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/controller/article/SexyArticleGetByTypeController.java
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/controller/group/GroupController.java
+/Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/controller/advertisement/AdvertisementController.java
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/controller/group/GroupDetailController.java
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/po/KeywordModel.java
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/controller/comment/AddGifPicGroupLikeController.java
@@ -29,7 +30,9 @@
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/controller/group/KeywordListController.java
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/utils/DateUtil.java
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/po/KeywordListModel.java
+/Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/service/AdvertisementService.java
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/handler/ApiHandler.java
+/Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/po/AdvertiseModel.java
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/utils/RegexUtils.java
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/controller/comment/GetCommentController.java
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/utils/RegexConstants.java
@@ -40,8 +43,10 @@
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/controller/user/UpdateUserInfoController.java
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/utils/ReflectUtils.java
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/controller/comment/AddLikeController.java
+/Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/service/impl/AdvertisementServiceImpl.java
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/controller/user/GetUserInfoController.java
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/service/impl/CatalogCoverServiceImpl.java
+/Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/mapper/AdvertisementMapper.java
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/utils/SpringUtils.java
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/controller/group/FindKeywordController.java
 /Users/simpleem/Desktop/4K魅图/后台/src/main/java/com/k4meitu/pic/mapper/CommentMapper.java

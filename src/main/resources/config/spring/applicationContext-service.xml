@@ -19,4 +19,6 @@
 	
 	<bean id="articleService" class="com.k4meitu.pic.service.impl.ArticleServiceImpl"></bean> 
 	
+	<bean id="advertisementService" class="com.k4meitu.pic.service.impl.AdvertisementServiceImpl"></bean>
+	
 </beans>

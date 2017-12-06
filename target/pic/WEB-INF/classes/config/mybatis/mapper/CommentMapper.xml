@@ -33,6 +33,18 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			(#{groupId}, #{imgId}, #{userId}, #{imgLike}, #{imgDislike}, #{date});
 	</insert>
 	
+	<insert id="addCommentLikeWithUser" parameterType="com.k4meitu.pic.po.ImgCmtLikeModel" useGeneratedKeys="true"
+        keyProperty="id">
+		INSERT INTO img_comment_like
+			(commentId, groupId, imgId,userId, likeUserId, likeOrDislike, date) 
+		VALUES
+			(#{commentId}, #{groupId}, #{imgId}, #{userId}, #{likeUserId}, #{likeOrDislike}, #{date});
+	</insert>
+	
+	<select id="findCommentLikeIsExistByCommentId" resultType="com.k4meitu.pic.po.ImgCmtLikeModel">
+		SELECT * FROM img_comment_like WHERE commentId = #{commentId} and likeUserId=#{likeUserId};
+	</select>
+	
 	<select id="findLikeIsExist" parameterType="com.k4meitu.pic.po.LikeModel" 
 		resultType="com.k4meitu.pic.po.LikeModel">
 		SELECT * FROM img_like WHERE groupId = #{groupId} and userId=#{userId};

@@ -15,6 +15,8 @@ public class SampleController {
 	public Map<String, Object> resultMap(Map<String, String> param){
 		Map<String, Object> map = new HashMap<String, Object>();
 		
+	
+		
 		return map;
 	}
 }
